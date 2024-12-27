@@ -1,0 +1,57 @@
+i am using nodemon for run the code 
+use npm start to run the code 
+the port is runs in port3002
+
+using mangodb database 
+----------------------------------------------------
+first register the user in postman 
+
+ex:POST  http://localhost:3002/auth/register
+ postman collection for register
+
+ {
+    "name":"name"
+    "email":"name@gmail.com"
+    "password":"name123"
+}
+--------------------------------------------------------
+then login the user using the register name and password
+
+ex:POST   http://localhost:3002/auth/login
+
+postman collection for login 
+
+{   "email":"name@gmail.com"
+    "password":"name123"
+}
+
+after the login user we get the JWT token
+-----------------------------------------------------------
+Then create the category for the user 
+
+ex: POST  http://localhost:3002/categories/addcategory
+
+postman collection for add category
+
+{
+    "name":"Eitems",
+    "userId":"676e5640499440ea12196052"
+}
+---------------------------------------------------------------
+After create the category then add the product for the category using category Id
+
+ex: POST  http://localhost:3002/products/addproduct
+
+here the postman collection for the add product
+
+{
+    "name":"Apple Phone",
+    "price":50000,
+    "categoryId":"676e5691499440ea12196055"
+}
+--------------------------------------------------
+
+want to downloaded modules
+
+* npm install express mongoose jsonwebtoken bcryptjs dotenv
+
